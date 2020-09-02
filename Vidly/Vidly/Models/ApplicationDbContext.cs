@@ -7,11 +7,13 @@ using System.Web;
 
 namespace Vidly.Models
 {
-    public class ApplicationDbContext 
+    public class ApplicationDbContext : DbContext
     {
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<MembershipType> MembershipType { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Rental> Rentals { get; set; }
 
 
         public ApplicationDbContext() 
@@ -19,11 +21,7 @@ namespace Vidly.Models
 
         }
 
-        internal void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

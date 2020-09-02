@@ -8,6 +8,8 @@ namespace Vidly.ViewModels
 {
     public class MovieFormViewModel
     {
+
+        public IEnumerable<Genre> Genres { get; set; }
         public int? Id { get; set; }
         public string Name { get; set; }
         public byte? GenreId { get; set; }

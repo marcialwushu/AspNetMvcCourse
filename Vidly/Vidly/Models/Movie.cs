@@ -10,5 +10,8 @@ namespace Vidly.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
+        public DateTime ReleaseDate { get; internal set; }
+        public byte? NumberInStock { get; internal set; }
+        public byte? GenreId { get; internal set; }
     }
 }

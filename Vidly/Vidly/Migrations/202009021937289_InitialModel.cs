@@ -72,7 +72,9 @@ namespace Vidly.Migrations
                 .ForeignKey("dbo.Movies", t => t.Movie_Id, cascadeDelete: true)
                 .Index(t => t.Customer_Id)
                 .Index(t => t.Movie_Id);
+
             
+
         }
         
         public override void Down()

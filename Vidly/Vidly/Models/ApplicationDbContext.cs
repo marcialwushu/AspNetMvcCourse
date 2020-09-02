@@ -19,6 +19,11 @@ namespace Vidly.Models
 
         }
 
+        internal void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

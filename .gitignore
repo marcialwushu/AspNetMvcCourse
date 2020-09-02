@@ -212,6 +212,9 @@ _pkginfo.txt
 
 # Others
 ClientBin/
+bin
+*.dll
+*.manifest
 ~$*
 *~
 *.dbmdl

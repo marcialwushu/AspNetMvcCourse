@@ -340,6 +340,10 @@
     <Compile Include="Migrations\202009021937289_InitialModel.Designer.cs">
       <DependentUpon>202009021937289_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009022006286_ApplyAnnotationToCustomerName.cs" />
+    <Compile Include="Migrations\202009022006286_ApplyAnnotationToCustomerName.Designer.cs">
+      <DependentUpon>202009022006286_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -431,6 +435,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202009021937289_InitialModel.resx">
       <DependentUpon>202009021937289_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009022006286_ApplyAnnotationToCustomerName.resx">
+      <DependentUpon>202009022006286_ApplyAnnotationToCustomerName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

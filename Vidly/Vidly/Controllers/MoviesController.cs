@@ -10,6 +10,21 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+
+        private ApplicationDbContext _context;
+
+        public MoviesController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.
+        }
+
+
+
         // GET: Movies/Random
         public ActionResult Random()
         {

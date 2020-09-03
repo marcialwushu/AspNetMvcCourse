@@ -344,6 +344,14 @@
     <Compile Include="Migrations\202009031219037_Setup.Designer.cs">
       <DependentUpon>202009031219037_Setup.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009031315544_MembershipType.cs" />
+    <Compile Include="Migrations\202009031315544_MembershipType.Designer.cs">
+      <DependentUpon>202009031315544_MembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009031404323_ApplicationUser.cs" />
+    <Compile Include="Migrations\202009031404323_ApplicationUser.Designer.cs">
+      <DependentUpon>202009031404323_ApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -440,6 +448,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009031219037_Setup.resx">
       <DependentUpon>202009031219037_Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009031315544_MembershipType.resx">
+      <DependentUpon>202009031315544_MembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009031404323_ApplicationUser.resx">
+      <DependentUpon>202009031404323_ApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

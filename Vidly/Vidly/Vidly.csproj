@@ -340,9 +340,9 @@
     <Compile Include="Migrations\202009021937289_InitialModel.Designer.cs">
       <DependentUpon>202009021937289_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009022006286_ApplyAnnotationToCustomerName.cs" />
-    <Compile Include="Migrations\202009022006286_ApplyAnnotationToCustomerName.Designer.cs">
-      <DependentUpon>202009022006286_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    <Compile Include="Migrations\202009031219037_Setup.cs" />
+    <Compile Include="Migrations\202009031219037_Setup.Designer.cs">
+      <DependentUpon>202009031219037_Setup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -369,6 +369,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -436,8 +438,8 @@
     <EmbeddedResource Include="Migrations\202009021937289_InitialModel.resx">
       <DependentUpon>202009021937289_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009022006286_ApplyAnnotationToCustomerName.resx">
-      <DependentUpon>202009022006286_ApplyAnnotationToCustomerName.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009031219037_Setup.resx">
+      <DependentUpon>202009031219037_Setup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

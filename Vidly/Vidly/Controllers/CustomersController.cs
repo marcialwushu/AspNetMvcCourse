@@ -44,6 +44,15 @@ namespace Vidly.Controllers
             return View("CustomerForm", viewModel);
         }
 
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customer.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
+        }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]

@@ -336,21 +336,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009021937289_InitialModel.cs" />
-    <Compile Include="Migrations\202009021937289_InitialModel.Designer.cs">
-      <DependentUpon>202009021937289_InitialModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009031219037_Setup.cs" />
-    <Compile Include="Migrations\202009031219037_Setup.Designer.cs">
-      <DependentUpon>202009031219037_Setup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009031315544_MembershipType.cs" />
-    <Compile Include="Migrations\202009031315544_MembershipType.Designer.cs">
-      <DependentUpon>202009031315544_MembershipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202009031404323_ApplicationUser.cs" />
-    <Compile Include="Migrations\202009031404323_ApplicationUser.Designer.cs">
-      <DependentUpon>202009031404323_ApplicationUser.cs</DependentUpon>
+    <Compile Include="Migrations\202009031706239_Setup.cs" />
+    <Compile Include="Migrations\202009031706239_Setup.Designer.cs">
+      <DependentUpon>202009031706239_Setup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -443,17 +431,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202009021937289_InitialModel.resx">
-      <DependentUpon>202009021937289_InitialModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009031219037_Setup.resx">
-      <DependentUpon>202009031219037_Setup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009031315544_MembershipType.resx">
-      <DependentUpon>202009031315544_MembershipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009031404323_ApplicationUser.resx">
-      <DependentUpon>202009031404323_ApplicationUser.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009031706239_Setup.resx">
+      <DependentUpon>202009031706239_Setup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -27,9 +27,10 @@ Nota:
         @foreach (var customer in Model)
         {
             <tr>
-                <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new {id = customer.Id })</td>
+                <td>@Html.ActionLink(customer.Name, "Save", "Customers", new {id = customer.Id })</td>
                 <td>@customer.MembershipType.Name</td>
             </tr>
+            
         }
     </tbody>
 </table>

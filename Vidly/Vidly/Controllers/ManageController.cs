@@ -8,12 +8,13 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Identity;
 
+
 namespace Vidly.Controllers
 {
     public class ManageController : Controller
     {
-        private ApplicationSignInManager _signInManager;
-        private ApplicationUserManager _userManager;
+        //private readonly ApplicationSignInManager _signInManager;
+        //private readonly ApplicationUserManager _userManager;
 
         public ManageController()
         {
@@ -23,13 +24,7 @@ namespace Vidly.Controllers
         
 
 
-}
-
-    internal class ApplicationUserManager 
-    {
     }
 
-    internal class ApplicationSignInManager
-    {
-    }
+    
 }

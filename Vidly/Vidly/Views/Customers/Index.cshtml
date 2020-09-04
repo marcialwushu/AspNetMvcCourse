@@ -23,16 +23,7 @@ Nota:
             <th>Delete</th>
         </tr>
     </thead>
-    <tbody>
-        @foreach (var customer in Model)
-        {
-            <tr>
-                <td>@Html.ActionLink(customer.Name, "Save", "Customers", new {id = customer.Id })</td>
-                <td>@customer.MembershipType.Name</td>
-            </tr>
-            
-        }
-    </tbody>
+    <tbody></tbody>
 </table>
 
 

@@ -382,30 +382,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\App_Start.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Context\DbContextLocal.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
-    <Compile Include="Controllers\ForumController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
-    <Compile Include="Controllers\_signInManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Mapper\ForumMap.cs" />
-    <Compile Include="Migrations\202009031832131_Setup.cs" />
-    <Compile Include="Migrations\202009031832131_Setup.designer.cs">
-      <DependentUpon>202009031832131_Setup.cs</DependentUpon>
+    <Compile Include="Migrations\202009041122580_Setup.cs" />
+    <Compile Include="Migrations\202009041122580_Setup.designer.cs">
+      <DependentUpon>202009041122580_Setup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Forum.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -502,8 +496,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202009031832131_Setup.resx">
-      <DependentUpon>202009031832131_Setup.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009041122580_Setup.resx">
+      <DependentUpon>202009041122580_Setup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

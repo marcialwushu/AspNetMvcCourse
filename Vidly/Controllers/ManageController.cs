@@ -149,6 +149,20 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
+
+        public async Task<ActionResult> DisableTwoFactorAuthentication()
+        {
+            await UserManager.SetTwoFactorEnabledAsync(User.Identity.GetUserId(), false);
+            var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+            if(user != null)
+            {
+                await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+            }
+            return RedirectToAction("Index", "Manage");
+        }
+
+
+
         private bool HasPassword()
         {
             

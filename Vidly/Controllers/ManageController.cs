@@ -300,6 +300,30 @@ namespace Vidly.Controllers
             });
         }
 
+        //
+        // POST: /Manage/LinkLogin
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LinkLogin(string provider)
+        {
+            // Request a redirect to the external login provider to link a login for the current user
+            return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
+        }
+
+
+
+
+ #region Helpers
+        // Used for XSRF protection when adding external logins
+        private const string XsrfKey = "XsrfId";
+
+        private IAuthenticationManager AuthenticationManager
+        {
+            get
+            {
+                return HttpContext.GetOwinContext().Authentication;
+            }
+        }
 
         private void AddErrors(IdentityResult result)
         {
@@ -309,15 +333,25 @@ namespace Vidly.Controllers
             }
         }
 
-
         private bool HasPassword()
         {
-            
-            
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            if (user != null)
+            {
+                return user.PasswordHash != null;
+            }
             return false;
         }
 
-        
+        private bool HasPhoneNumber()
+        {
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            if (user != null)
+            {
+                return user.PhoneNumber != null;
+            }
+            return false;
+        }
 
         public enum ManageMessageId
         {
@@ -329,7 +363,9 @@ namespace Vidly.Controllers
             RemovePhoneSuccess,
             Error
         }
+
+ #endregion
     }
 
-    
+
 }

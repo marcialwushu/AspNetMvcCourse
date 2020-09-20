@@ -245,6 +245,14 @@ namespace Vidly.Controllers
             return View(model);
         }
 
+        //
+        // GET: /Manage/SetPassword
+        public ActionResult SetPassword()
+        {
+            return View();
+        }
+
+
 
 
         private void AddErrors(IdentityResult result)

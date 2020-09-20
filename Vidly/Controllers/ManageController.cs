@@ -197,6 +197,22 @@ namespace Vidly.Controllers
             return View(model);
         }
 
+        //
+        // GET: /Manage/RemovePhoneNumber
+        public async Task<ActionResult> RemovePhoneNumber()
+        {
+            var result = await UserManager.SetPhoneNumberAsync(User.Identity.GetUserId(), null);
+            if (!result.Succeeded)
+            {
+                return RedirectToAction("Index", new { Message = ManageMessageId.Error });
+            }
+            var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+            if (user != null)
+            {
+                await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+            }
+            return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
+        }
 
         private bool HasPassword()
         {

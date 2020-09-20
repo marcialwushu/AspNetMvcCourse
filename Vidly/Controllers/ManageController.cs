@@ -149,7 +149,9 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
-
+        // POST: /Manage/DisableTwoFactorAuthentication
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<ActionResult> DisableTwoFactorAuthentication()
         {
             await UserManager.SetTwoFactorEnabledAsync(User.Identity.GetUserId(), false);
@@ -161,6 +163,14 @@ namespace Vidly.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
+        //
+        // GET: /Manage/VerifyPhoneNumber
+        public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
+        {
+            var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), phoneNumber);
+            // Send an SMS through the SMS provider to verify the phone number
+            return phoneNumber == null ? View("Error") : View(new VerifyPhoneNumberViewModel { PhoneNumber = phoneNumber });
+        }
 
 
         private bool HasPassword()
